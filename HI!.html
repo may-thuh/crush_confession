@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>For U!♡</title>
+  <link rel="website icon" type="png"
+  href="c:\Users\Asus\Downloads\heart-icon1.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #ffffff, #aba9e9);
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #gif {
+      width: 200px;
+      
+    }
+
+    #textbox {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    #button {
+      background-color: #64638f;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 15px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 10px;
+    }
+
+    #button:hover {
+      background-color: #cbc9ff;
+    }
+
+    #content {
+      display: none;
+      font-size: 24px;
+      margin-top: 20px;
+      color: #ff7eb9;
+      animation: fadeInOut 2s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img id="gif" src="c:\Users\Asus\Downloads\heyy.gif" alt="GIF Photo">
+    <div id="textbox">Heyyy! It's me!</div><br>
+    <button id="button">Hi Back</button>
+    <div id="content"></div>
+  </div>
+
+  <script>
+    // JavaScript code
+    const button = document.getElementById("button");
+    const content = document.getElementById("content");
+
+    button.addEventListener("click", () => {
+      // Load another page with a different GIF
+      window.location.href = "me n u.html";
+    });
+  </script>
+</body>
+</html>

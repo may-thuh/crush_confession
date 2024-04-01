@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>For U!♡</title>
+  <link rel="website icon" type="png"
+  href="c:\Users\Asus\Downloads\heart-icon1.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Congratulations</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    position: relative; /* Added to make positioning relative */
+    font-family: 'Arial', sans-serif; /* Added custom font */
+  }
+  #cover-image {
+    position: absolute; /* Changed to absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  #gif {
+    position: absolute;
+    top: 20px; /* Adjusted the top position for the image */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Added to ensure image is above the cover image */
+    width: 15%; 
+  }
+  #centered-text {
+    position: absolute;
+    top: 150px; /* Adjusted the top position for the text box */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 24px;
+    color: #ed5b71; /* Changed text color */
+    z-index: 1; /* Added to ensure text is above the cover image */
+    margin-top: 80px;
+    font-family: 'Comic Sans MS', cursive; /* Added custom font */
+  }
+  #video-container {
+    position: relative; /* Changed to relative */
+    z-index: 0;
+    width: 60%; /* Added to set the width of the video container */
+    margin: 0 auto; /* Added to center the video container */
+    margin-top: 1000px; /* Adjusted the top margin for the video container */
+  }
+  #video {
+    width: 100%; /* Changed to 100% to fill the video container */
+    height: auto;
+    display: block;
+  }
+  .heart {
+    font-size: 40px;
+    color: #ff5f9b;
+    margin-bottom: 10px;
+    animation: pulse 1s infinite alternate;
+  }
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  #confettiMessage {
+    display: none;
+    font-size: 24px;
+    margin-top: 20px;
+    color: #df5e5e;
+    animation: fadeInOut 2s infinite;
+  }
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+  <img id="cover-image" src="c:\Users\Asus\Downloads\confetti.gif" alt="Cover Image">
+  <img id="gif" src="c:\Users\Asus\Downloads\us_5.gif" alt="Gif">
+  <div id="centered-text">
+    <p>Congrats you made the right choice 🎉</p>
+    <p>DM me the time and venue (づ ᴗ _ᴗ)づ♡</p><br>
+    <p>Btw, I Chose A Song To Listen Together! (¬_¬")</p>
+    <p>▶︎ •၊၊||၊|။||||| 0:10</p>
+  </div>
+  <div id="confetti-container"></div>
+  <div id="video-container">
+    <video id="video" controls>
+      <source src="c:\Users\Asus\Videos\Captures\ponchet_i_like_you_the_most_ft_varinz_shad_english_cover_full.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video><br>
+  </div>
+
+  <script>
+    // JavaScript code for confetti effect
+    // Insert JavaScript code for confetti effect here
+    // Example code from Source [2]
+    const confettiSettings = {
+      target: 'confetti-container',
+      max: 100,
+      size: 1,
+      animate: true,
+      props: ['circle', 'square'],
+      colors: [[165,104,246],[230,61,135],[0,199,228],[253,214,126]],
+      clock: 25,
+      rotate: true,
+      start_from_edge: true,
+      respawn: true
+    };
+
+    const confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+  </script>
+  <script src="style.js"></script> <!-- Include the confetti library -->
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>For U!♡</title>
+    <link rel="website icon" type="png"
+  href="c:\Users\Asus\Downloads\heart-icon1.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H87QDWEFC6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H87QDWEFC6');
+</script>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f0;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background:linear-gradient(to bottom,#ffffff,#aba9e9);
+        background-size: cover;
+    }
+    .welcome {
+            width: 200px; /* Adjust the width of the image */
+            
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: -30px; /* Adjust margin bottom to create space between image and card */
+            margin-left: 350px;
+        }
+    .card {
+        background-color:#9795cf;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    h1 {
+        color: #333;
+        font-size: 28px;
+        margin-bottom: 20px;
+        animation: bounce 1s infinite alternate;
+    }
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+    .button {
+        background-color:#64638f;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 15px 30px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 10px;
+    }
+    .button:hover {
+        background-color: #cbc9ff;
+    }
+    #message {
+        display: none;
+        font-size: 24px;
+        margin-top: 20px;
+        color: #ff7eb9;
+        animation: fadeInOut 2s infinite;
+    }
+    @keyframes fadeInOut {
+        0%, 100% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+    .heart {
+        font-size: 40px;
+        color: #ff5f9b;
+        margin-bottom: 10px;
+        animation: pulse 1s infinite alternate;
+    }
+    @keyframes pulse {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.1);
+        }
+    }
+
+    #confettiMessage {
+      display: none;
+      font-size: 24px;
+      margin-top: 20px;
+      color: #ff7eb9;
+      animation: fadeInOut 2s infinite;
+    }
+    @keyframes fadeInOut {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img class="welcome" src="c:\Users\Asus\Downloads\hmmm.gif">
+    <div class="card">
+      <div class="heart">❤️</div>
+      <h1 id="question">So, will you be my something or somethee? 👉👈</h1>
+      <div>
+        <button id="yesButton" class="button">Yes! ❤️</button>
+        <button id="noButton" class="button">No! 💔</button>
+      </div>
+      <div id="confettiMessage"></div>
+      <button id="continueButton" class="button" style="display: none;">Continue</button>
+    </div>
+  </div>
+
+  <script>
+    // Get the "No" button element
+    const noButton = document.getElementById("noButton");
+
+    // Add a mouseover event listener to move the "No" button randomly
+    noButton.addEventListener("mouseover", () => {
+      const x = Math.floor(Math.random() * window.innerWidth);
+      const y = Math.floor(Math.random() * window.innerHeight);
+
+      // Restrict the "No" button's movement within the bounds of the screen
+      const buttonWidth = noButton.offsetWidth;
+      const buttonHeight = noButton.offsetHeight;
+      const maxX = window.innerWidth - buttonWidth;
+      const maxY = window.innerHeight - buttonHeight;
+      const adjustedX = x < maxX ? x : maxX;
+      const adjustedY = y < maxY ? y : maxY;
+
+      // Apply the new position to the button
+      noButton.style.position = "absolute";
+      noButton.style.left = `${adjustedX}px`;
+      noButton.style.top = `${adjustedY}px`;
+    });
+
+    // Get the "Yes" button element
+    const yesButton = document.getElementById("yesButton");
+
+    // Add a click event listener to create confetti and redirect to another page
+    yesButton.addEventListener("click", () => {
+      // ... (existing code to create confetti and display the message)
+
+      // Redirect to another web page
+      redirectToAnotherPage();
+    });
+
+    function redirectToAnotherPage() {
+      // Redirect to another web page
+      window.location.href = "final.html";
+    }
+  </script>
+</body>
+</html>
